@@ -52,6 +52,6 @@ app.use('/admin/products',adminProducts);
 
 
 
-app.listen(3000,function(){
+app.listen(process.env.PORT, process.env.IP,function(){
 	console.log("Ashtavakra's server is working just fine!");
 });
