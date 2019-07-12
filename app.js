@@ -11,7 +11,20 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(logger("dev"));
 
-mongoose.connect('mongodb://localhost/ashtavakra', {useNewUrlParser: true});
+const MongoClient = require('mongodb').MongoClient;
+
+// replace the uri string with your connection string.
+const uri="mongodb+srv://admin:<ucusd-32>@cluster0-wuqbf.mongodb.net/test?retryWrites=true&w=majority"
+MongoClient.connect(uri, function(err, client) {
+   if(err) {
+        console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
+   }
+   console.log('Connected...');
+   const collection = client.db("test").collection("devices");
+   // perform actions on the collection object
+   client.close();
+});
+
 //express session middleware
 app.set('trust proxy', 1) // trust first proxy
 // app.use(session({
