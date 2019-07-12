@@ -14,7 +14,7 @@ app.use(logger("dev"));
 const MongoClient = require('mongodb').MongoClient;
 
 // replace the uri string with your connection string.
-const uri="mongodb+srv://admin:<ucusd-32>@cluster0-wuqbf.mongodb.net/test?retryWrites=true&w=majority"
+const uri="mongodb+srv://admin2:<raghavA3B3>@cluster0-wuqbf.mongodb.net/test?retryWrites=true&w=majority"
 MongoClient.connect(uri, function(err, client) {
    if(err) {
         console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
