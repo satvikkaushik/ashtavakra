@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/starter-template/">
+
+    <title>Ashtavakra</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="starter-template.css" rel="stylesheet">
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse ">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Ashtavakra</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="/admin/categories">Categories</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container">
+    </div><!-- /.container -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<div class="container">
+  <h2>Add a Product</h2>
+  <!-- <a href="/admin/categories" class="btn btn-primary" > Go Back to view all Categories </a> -->
+  <form action="/admin/products/add-product" method="POST">
+    <div class="form-group">
+      <label for="name">Product Name</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter Product" name="productname">
+    </div>
+    <div class="form-group">
+      <label for="name">Description</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter Description" name="description">
+    </div>
+    <div class="form-group">
+      <label for="name">Details</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter Details" name="details">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Product select</label>
+      <select class="form-control" id="" name="category">
+	<%categories.forEach(function(cat){ %>
+        <option><%=cat.title%></option>
+	<% }); %>
+        
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="name">Image URL 1 with pixels : 600x600</label>
+      <input type="name" class="form-control" id="img1" placeholder="Enter url" name="imgUrl1">
+    </div>
+    <div class="form-group">
+      <label for="name">Image URL 2</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter url" name="imgUrl2">
+    </div>
+    <div class="form-group">
+      <label for="name">Image URL 3</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter url" name="imgUrl3">
+    </div>
+    <div class="form-group">
+      <label for="name">Image URL 4</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter url" name="imgUrl4">
+    </div>
+    <div class="form-group">
+      <label for="name">Flipkart URL</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter url" name="flipUrl">
+    </div>
+    <div class="form-group">
+      <label for="name">Amazon URL </label>
+      <input type="name" class="form-control" id="name" placeholder="Enter url" name="amazonUrl">
+    </div>
+       <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+</body>
+</html>
