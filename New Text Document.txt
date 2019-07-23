@@ -1,1 +1,0 @@
-A has a range [L1, R1] and B has a range [L2, R2]. Both players pick a random number (each number is equi-probably picked) from their respective ranges.Their individual score is defined as the sum of divisors of the number they picked.The player with the h
